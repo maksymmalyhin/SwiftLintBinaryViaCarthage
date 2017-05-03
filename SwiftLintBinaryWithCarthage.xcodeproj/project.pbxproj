@@ -12,6 +12,7 @@
 		77C8397F1EBA09510077B586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C8397D1EBA09510077B586 /* Main.storyboard */; };
 		77C839811EBA09510077B586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C839801EBA09510077B586 /* Assets.xcassets */; };
 		77C839841EBA09510077B586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C839821EBA09510077B586 /* LaunchScreen.storyboard */; };
+		77C8398C1EBA09650077B586 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 77C8398B1EBA09650077B586 /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		77C839801EBA09510077B586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77C839831EBA09510077B586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C839851EBA09510077B586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77C8398B1EBA09650077B586 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		77C8396D1EBA09510077B586 = {
 			isa = PBXGroup;
 			children = (
+				77C8398B1EBA09650077B586 /* Cartfile */,
 				77C839781EBA09510077B586 /* SwiftLintBinaryWithCarthage */,
 				77C839771EBA09510077B586 /* Products */,
 			);
@@ -71,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77C839881EBA09510077B586 /* Build configuration list for PBXNativeTarget "SwiftLintBinaryWithCarthage" */;
 			buildPhases = (
+				77C8398D1EBA09E10077B586 /* ShellScript */,
 				77C839721EBA09510077B586 /* Sources */,
 				77C839731EBA09510077B586 /* Frameworks */,
 				77C839741EBA09510077B586 /* Resources */,
@@ -125,11 +129,28 @@
 			files = (
 				77C839841EBA09510077B586 /* LaunchScreen.storyboard in Resources */,
 				77C839811EBA09510077B586 /* Assets.xcassets in Resources */,
+				77C8398C1EBA09650077B586 /* Cartfile in Resources */,
 				77C8397F1EBA09510077B586 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77C8398D1EBA09E10077B586 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$(SRCROOT)/Carthage/Build/Mac/swiftlint\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77C839721EBA09510077B586 /* Sources */ = {
